@@ -62,4 +62,21 @@ Does the solution meet the goal?
     • A. Yes
     • B. No Most Voted
 
+Question #16Topic 1
+Your company has three virtual machines (VMs) that are included in an availability set.
+You try to resize one of the VMs, which returns an allocation failure message.
+It is imperative that the VM is resized.
+Which of the following actions should you take?
+A. You should only stop one of the VMs.
+B. You should stop two of the VMs.
+C. You should stop all three VMs. Most Voted
+D. You should remove the necessary VM from the availability set.
+Correct Answer: C 🗳️
+If the VM you wish to resize is part of an availability set, then you must stop all VMs in the availability set before changing the size of any VM in the availability set.
+The reason all VMs in the availability set must be stopped before performing the resize operation to a size that requires different hardware is that all running VMs in the availability set must be using the same physical hardware cluster. Therefore, if a change of physical hardware cluster is required to change the VM size then all VMs must be first stopped and then restarted one-by-one to a different physical hardware clusters.
+Reference:
+https://azure.microsoft.com/es-es/blog/resize-virtual-machines/
+
+
+
 
