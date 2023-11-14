@@ -78,5 +78,57 @@ Reference:
 https://azure.microsoft.com/es-es/blog/resize-virtual-machines/
 
 
+Question #17Topic 1
+You have an Azure virtual machine (VM) that has a single data disk. You have been tasked with attaching this data disk to another Azure VM.
+You need to make sure that your strategy allows for the virtual machines to be offline for the least amount of time possible.
+Which of the following is the action you should take FIRST?
+A. Stop the VM that includes the data disk. correct
+B. Stop the VM that the data disk must be attached to.
+C. Detach the data disk. Most Voted
+D. Delete the VM that includes the data disk
+
+
+Question #18Topic 1
+Your company has an Azure subscription.
+You need to deploy a number of Azure virtual machines (VMs) using Azure Resource Manager (ARM) templates. You have been informed that the VMs will be included in a single availability set.
+You are required to make sure that the ARM template you configure allows for as many VMs as possible to remain accessible in the event of fabric failure or maintenance.
+Which of the following is the value that you should configure for the platformFaultDomainCount property?
+A. 10
+B. 30
+C. Min Value
+D. Max Value Most Voted
+ 
+Correct Answer: D 🗳️
+The number of fault domains for managed availability sets varies by region - either two or three per region.
+Reference:
+https://docs.microsoft.com/en-us/azure/virtual-machines/windows/manage-availability
+Community vote distribution
+
+
+Question #19Topic 1
+Your company has an Azure subscription.
+You need to deploy a number of Azure virtual machines (VMs) using Azure Resource Manager (ARM) templates. You have been informed that the VMs will be included in a single availability set.
+You are required to make sure that the ARM template you configure allows for as many VMs as possible to remain accessible in the event of fabric failure or maintenance.
+Which of the following is the value that you should configure for the platformUpdateDomainCount property?
+A. 10
+B. 20 Most Voted
+C. 30
+D. 40
+ 
+Correct Answer: B 🗳️
+Each virtual machine in your availability set is assigned an update domain and a fault domain by the underlying Azure platform. For a given availability set, five non-user-configurable update domains are assigned by default (Resource Manager deployments can then be increased to provide up to 20 update domains) to indicate groups of virtual machines and underlying physical hardware that can be rebooted at the same time.
+
+
+
+question 20 
+DRAG DROP -
+You have downloaded an Azure Resource Manager (ARM) template to deploy numerous virtual machines (VMs). The ARM template is based on a current VM, but must be adapted to reference an administrative password.
+You need to make sure that the password cannot be stored in plain text.
+You are preparing to create the necessary components to achieve your goal.
+Which of the following should you create to achieve your goal? Answer by dragging the correct option from the list to the answer area.
+sol: key volt + acces control
+
+
+
 
 
