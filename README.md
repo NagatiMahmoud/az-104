@@ -181,3 +181,32 @@ For Hyper-v server
 - Replication policy
 https://docs.microsoft.com/en-nz/azure/site-recovery/hyper-v-prepare-on-premises-tutorial
 
+
+Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements.
+Your company's Azure subscription includes two Azure networks named VirtualNetworkA and VirtualNetworkB.
+VirtualNetworkA includes a VPN gateway that is configured to make use of static routing. Also, a site-to-site VPN connection exists between your company's on- premises network and VirtualNetworkA.
+You have configured a point-to-site VPN connection to VirtualNetworkA from a workstation running Windows 10. After configuring virtual network peering between
+VirtualNetworkA and VirtualNetworkB, you confirm that you are able to access VirtualNetworkB from the company's on-premises network. However, you find that you cannot establish a connection to VirtualNetworkB from the Windows 10 workstation.
+You have to make sure that a connection to VirtualNetworkB can be established from the Windows 10 workstation.
+Solution: You choose the Allow gateway transit setting on VirtualNetworkA.
+Does the solution meet the goal?
+A. Yes
+B. No Most Voted
+"After configuring virtual network peering between
+VirtualNetworkA and VirtualNetworkB, you confirm that you are able to access VirtualNetworkB from the company's on-premises network." This indicates the Allow/Use gateway transit is set up working. The next step will be restart/reinstall the VPN-Client config at the windows 10 WS.
+
+Question #27Topic 1
+Your company has virtual machines (VMs) hosted in Microsoft Azure. The VMs are located in a single Azure virtual network named VNet1.
+The company has users that work remotely. The remote workers require access to the VMs on VNet1.
+You need to provide access for the remote workers.
+What should you do?
+A. Configure a Site-to-Site (S2S) VPN.
+B. Configure a VNet-toVNet VPN.
+C. Configure a Point-to-Site (P2S) VPN. Most Voted
+D. Configure DirectAccess on a Windows Server 2012 server VM.
+E. Configure a Multi-Site VPN
+ 
+Correct Answer: C 🗳️
+A Point-to-Site (P2S) VPN gateway connection lets you create a secure connection to your virtual network from an individual client computer.
+Reference:
+
