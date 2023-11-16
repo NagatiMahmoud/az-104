@@ -128,7 +128,56 @@ You are preparing to create the necessary components to achieve your goal.
 Which of the following should you create to achieve your goal? Answer by dragging the correct option from the list to the answer area.
 sol: key volt + acces control
 
+Question #21Topic 1
+Your company has an Azure Active Directory (Azure AD) tenant that is configured for hybrid coexistence with the on-premises Active Directory domain.
+The on-premise virtual environment consists of virtual machines (VMs) running on Windows Server 2012 R2 Hyper-V host servers.
+You have created some PowerShell scripts to automate the configuration of newly created VMs. You plan to create several new VMs.
+You need a solution that ensures the scripts are run on the new VMs.
+Which of the following is the best solution?
+A. Configure a SetupComplete.cmd batch file in the %windir%\setup\scripts directory. Most Voted
+B. Configure a Group Policy Object (GPO) to run the scripts as logon scripts.
+C. Configure a Group Policy Object (GPO) to run the scripts as startup scripts.
+D. Place the scripts in a new virtual hard disk (VHD).
+ 
+Correct Answer: A 🗳️
+After you deploy a Virtual Machine you typically need to make some changes before it's ready to use. This is something you can do manually or you could use
+Remote PowerShell to automate the configuration of your VM after deployment for example.
+But now there's a third alternative available allowing you customize your VM: the CustomScriptextension.
+This CustomScript extension is executed by the VM Agent and it's very straightforward: you specify which files it needs to download from your storage account and which file it needs to execute. You can even specify arguments that need to be passed to the script. The only requirement is that you execute a .ps1 file.
+Reference:
+https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup
 
 
 
+Question #22Topic 1
+Your company has an Azure Active Directory (Azure AD) tenant that is configured for hybrid coexistence with the on-premises Active Directory domain.
+You plan to deploy several new virtual machines (VMs) in Azure. The VMs will have the same operating system and custom software requirements.
+You configure a reference VM in the on-premise virtual environment. You then generalize the VM to create an image.
+You need to upload the image to Azure to ensure that it is available for selection when you create the new Azure VMs.
+Which PowerShell cmdlets should you use?
+A. Add-AzVM
+B. Add-AzVhd Most Voted
+C. Add-AzImage
+D. Add-AzImageDataDisk
+ 
+Correct Answer: B 🗳️
+The Add-AzVhd cmdlet uploads on-premises virtual hard disks, in .vhd file format, to a blob storage account as fixed virtual hard disks.
+Reference:
+https://docs.microsoft.com/en-us/azure/virtual-machines/windows/upload-generalized-managed
+
+DRAG DROP -
+Your company has an Azure subscription that includes a number of Azure virtual machines (VMs), which are all part of the same virtual network.
+Your company also has an on-premises Hyper-V server that hosts a VM, named VM1, which must be replicated to Azure.
+Which of the following objects that must be created to achieve this goal? Answer by dragging the correct option from the list to the answer area. 
+sol : 
+For physical servers
+- Storage Account
+- Azure Recovery Services Vault
+- Replication policy
+https://docs.microsoft.com/en-us/azure/site-recovery/physical-azure-disaster-recovery
+For Hyper-v server
+- Hyper-V site
+- Azure Recovery Services Vault
+- Replication policy
+https://docs.microsoft.com/en-nz/azure/site-recovery/hyper-v-prepare-on-premises-tutorial
 
