@@ -210,3 +210,26 @@ Correct Answer: C 🗳️
 A Point-to-Site (P2S) VPN gateway connection lets you create a secure connection to your virtual network from an individual client computer.
 Reference:
 
+
+
+Question #31Topic 1
+Your company has two on-premises servers named SRV01 and SRV02. Developers have created an application that runs on SRV01. The application calls a service on SRV02 by IP address.
+You plan to migrate the application on Azure virtual machines (VMs). You have configured two VMs on a single subnet in an Azure virtual network.
+You need to configure the two VMs with static internal IP addresses.
+What should you do?
+A. Run the New-AzureRMVMConfig PowerShell cmdlet.
+B. Run the Set-AzureSubnet PowerShell cmdlet.
+C. Modify the VM properties in the Azure Management Portal.
+D. Modify the IP properties in Windows Network and Sharing Center.
+E. Run the Set-AzureStaticVNetIP PowerShell cmdlet. Most Voted
+ 
+Correct Answer: E 🗳️
+Specify a static internal IP for a previously created VM
+If you want to set a static IP address for a VM that you previously created, you can do so by using the following cmdlets. If you already set an IP address for the
+VM and you want to change it to a different IP address, you'll need to remove the existing static IP address before running these cmdlets. See the instructions below to remove a static IP.
+For this procedure, you'll use the Update-AzureVM cmdlet. The Update-AzureVM cmdlet restarts the VM as part of the update process. The DIP that you specify will be assigned after the VM restarts. In this example, we set the IP address for VM2, which is located in cloud service StaticDemo.
+Get-AzureVM -ServiceName StaticDemo -Name VM2 | Set-AzureStaticVNetIP -IPAddress 192.168.4.7 | Update-AzureVM
+
+
+
+
